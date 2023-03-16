@@ -3,7 +3,7 @@ const router = express.Router()
 import Salary from './ReportedSalary.js'
 
 
-router.use('/bachelor', Bachelor)
-router.use('/bachelorette', Bachelorette)
+router.use('/salaries', Salary)
+
 
 export default router
