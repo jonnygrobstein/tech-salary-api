@@ -20,7 +20,8 @@ To convert the CSV/XLSX data to JSON prior to importing the data I utilized the 
 The format used was fairly straight forward and was designed with the ability to expand the scope if needed.
 
 I used Express Router to allow for growth if needed.  As you can see, currently there is only 1 route, but I'd rather set it up to expand instead of change everything later.
-<code>
+
+```js
 import express from 'express'
 const router = express.Router()
 import Salary from './ReportedSalary.js'
@@ -28,7 +29,7 @@ import Salary from './ReportedSalary.js'
 router.use('/salaries', Salary)
 
 export default router
-</code>
+```
 
 ## Instructions For Use
 
