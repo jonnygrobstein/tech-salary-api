@@ -1,0 +1,296 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0", 
+      "title": "Tech Salaries",
+      "description": "Tech Salary API",
+      "license": {
+        "name": "Jonny Grobstein",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "tags": [
+      {
+        "name": "Users",
+        "description": "API for users in the system"
+      }
+    ],
+    "schemes": ["http"],
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
+    "paths": {
+      "/salaries": {
+        "get": {
+          "tags": ["Salaries"],
+          "summary": "Get all salaries in system",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "type": "object",
+                "example": {
+                  "year": 2022,
+                  "employer": "Salesforce",
+                  "job_title": "Software Engineer",
+                  "job_category": "Engineer",
+                  "job_level": "Junior",
+                  "education": "Bachelor's Degree",
+                  "base_salary": 120000,
+                  "sign_on_bonus": 8000,
+                  "bonus": 12000,
+                  "stock_grant": 20000,
+                  "total_comp": 160000,
+                  "total_experience": 1,
+                  "years_at_company": 1,
+                  "company_size": "20000",
+                  "location": "Austin",
+                  "state": "TX",
+                  "country": "USA",
+                  "gender": "Male",
+                  "ethnicity": "White"
+                }
+              }
+            }
+          }
+        }
+      },
+      
+      "/salaries/{year}": {
+        "get": {
+          "tags": ["Salaries"],
+          "summary": "Get all salaries by year",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "type": "object",
+                "example": {
+                  "year": 2022,
+                  "employer": "Salesforce",
+                  "job_title": "Software Engineer",
+                  "job_category": "Engineer",
+                  "job_level": "Junior",
+                  "education": "Bachelor's Degree",
+                  "base_salary": 120000,
+                  "sign_on_bonus": 8000,
+                  "bonus": 12000,
+                  "stock_grant": 20000,
+                  "total_comp": 160000,
+                  "total_experience": 1,
+                  "years_at_company": 1,
+                  "company_size": "20000",
+                  "location": "Austin",
+                  "state": "TX",
+                  "country": "USA",
+                  "gender": "Male",
+                  "ethnicity": "White"
+                }
+              }
+            }
+          }
+        }
+      },
+      
+      "/salaries/addSalary": {
+        "post": {
+          "tags": ["Salaries"],
+          "description": "Create new salary in system",
+          "parameters": [
+            {
+              "name": "salary",
+              "in": "body",
+              "description": "Salary that we want to create",
+              "schema": {
+                "properties": {
+                  "year": { "type": "Number" },
+                  "employer": { "type": "String" },
+                  "job_title": { "type": "String" },
+                  "job_category": { "type": "String" },
+                  "job_level": { "type": "String" },
+                  "education": { "type": "String" },
+                  "base_salary": { "type": "Number" },
+                  "sign_on_bonus": { "type": "Number" },
+                  "bonus": { "type": "Number" },
+                  "stock_grant": { "type": "Number" },
+                  "total_comp": { "type": "Number" },
+                  "total_experience": { "type": "Number" },
+                  "years_at_company": { "type": "Number" },
+                  "company_size": { "type": "String" },
+                  "location": { "type": "String" },
+                  "state": { "type": "String" },
+                  "country": { "type": "String" },
+                  "gender": { "type": "String" },
+                  "ethnicity": { "type": "String" }
+                }
+              }
+            }
+          ],
+          "produces": ["application/json"],
+          "responses": {
+            "200": {
+              "description": "New salary is created",
+              "schema": {
+                "type": "object",
+                "example": {
+                  "year": 2022,
+                  "employer": "Salesforce",
+                  "job_title": "Software Engineer",
+                  "job_category": "Engineer",
+                  "job_level": "Junior",
+                  "education": "Bachelor's Degree",
+                  "base_salary": 120000,
+                  "sign_on_bonus": 8000,
+                  "bonus": 12000,
+                  "stock_grant": 20000,
+                  "total_comp": 160000,
+                  "total_experience": 1,
+                  "years_at_company": 1,
+                  "company_size": "20000",
+                  "location": "Austin",
+                  "state": "TX",
+                  "country": "USA",
+                  "gender": "Male",
+                  "ethnicity": "White"
+                }
+              }
+            }
+          }
+        }
+      },
+      "/salaries/{id}": {
+        "put": {
+          "tags": ["Salaries"],
+          "description": "Edit existing salary in system",
+          "parameters": [
+            {
+              "name": "salary",
+              "in": "body",
+              "description": "Salary that we want to edit",
+              "schema": {
+                "properties": {
+                  "year": { "type": "Number" },
+                  "employer": { "type": "String" },
+                  "job_title": { "type": "String" },
+                  "job_category": { "type": "String" },
+                  "job_level": { "type": "String" },
+                  "education": { "type": "String" },
+                  "base_salary": { "type": "Number" },
+                  "sign_on_bonus": { "type": "Number" },
+                  "bonus": { "type": "Number" },
+                  "stock_grant": { "type": "Number" },
+                  "total_comp": { "type": "Number" },
+                  "total_experience": { "type": "Number" },
+                  "years_at_company": { "type": "Number" },
+                  "company_size": { "type": "String" },
+                  "location": { "type": "String" },
+                  "state": { "type": "String" },
+                  "country": { "type": "String" },
+                  "gender": { "type": "String" },
+                  "ethnicity": { "type": "String" }
+                }
+              }
+            }
+          ],
+          "produces": ["application/json"],
+          "responses": {
+            "200": {
+              "description": "Salary has been edited",
+              "schema": {
+                "type": "object",
+                "example": {
+                  "year": 2022,
+                  "employer": "Salesforce",
+                  "job_title": "Software Engineer",
+                  "job_category": "Engineer",
+                  "job_level": "Junior",
+                  "education": "Bachelor's Degree",
+                  "base_salary": 120000,
+                  "sign_on_bonus": 8000,
+                  "bonus": 12000,
+                  "stock_grant": 20000,
+                  "total_comp": 160000,
+                  "total_experience": 1,
+                  "years_at_company": 1,
+                  "company_size": "20000",
+                  "location": "Austin",
+                  "state": "TX",
+                  "country": "USA",
+                  "gender": "Male",
+                  "ethnicity": "White"
+                }
+              }
+            }
+          }
+        },
+        "delete": {
+          "tags": ["Salaries"],
+          "description": "Delete existing salary in system",
+          "parameters": [
+            {
+              "name": "salary",
+              "in": "body",
+              "description": "Salary that we want to delete",
+              "schema": {
+                "properties": {
+                  "year": { "type": "Number" },
+                  "employer": { "type": "String" },
+                  "job_title": { "type": "String" },
+                  "job_category": { "type": "String" },
+                  "job_level": { "type": "String" },
+                  "education": { "type": "String" },
+                  "base_salary": { "type": "Number" },
+                  "sign_on_bonus": { "type": "Number" },
+                  "bonus": { "type": "Number" },
+                  "stock_grant": { "type": "Number" },
+                  "total_comp": { "type": "Number" },
+                  "total_experience": { "type": "Number" },
+                  "years_at_company": { "type": "Number" },
+                  "company_size": { "type": "String" },
+                  "location": { "type": "String" },
+                  "state": { "type": "String" },
+                  "country": { "type": "String" },
+                  "gender": { "type": "String" },
+                  "ethnicity": { "type": "String" }
+                }
+              }
+            }
+          ],
+          "produces": ["application/json"],
+          "responses": {
+            "200": {
+              "description": "Salary has been deleted",
+              "schema": {
+                "type": "object",
+                "example": {
+                  "year": 2022,
+                  "employer": "Salesforce",
+                  "job_title": "Software Engineer",
+                  "job_category": "Engineer",
+                  "job_level": "Junior",
+                  "education": "Bachelor's Degree",
+                  "base_salary": 120000,
+                  "sign_on_bonus": 8000,
+                  "bonus": 12000,
+                  "stock_grant": 20000,
+                  "total_comp": 160000,
+                  "total_experience": 1,
+                  "years_at_company": 1,
+                  "company_size": "20000",
+                  "location": "Austin",
+                  "state": "TX",
+                  "country": "USA",
+                  "gender": "Male",
+                  "ethnicity": "White"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+    
+  
+  

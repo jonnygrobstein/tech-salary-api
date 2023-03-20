@@ -54,4 +54,11 @@ router.delete('/:id', salaryController.delete)
 
 ## Sources
 
-Currently there are 3 sources of data
+Currently there are 3 sources of data that are being used in the database:
+
+
+
+
+## API Documentation
+
+**To access the API Documentation, go to the [Swagger API Docs](http://localhost:3000/api-docs/#/) page once the server is up and running.**

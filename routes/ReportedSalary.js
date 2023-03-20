@@ -5,7 +5,7 @@ const Salary = router
 
 router.get('/', salaryController.index)
 router.get('/:year', salaryController.showYear)
-router.post('/', salaryController.create)
+router.post('/addSalary', salaryController.create)
 router.put('/:id', salaryController.edit)
 router.delete('/:id', salaryController.delete)
 
