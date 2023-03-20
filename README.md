@@ -38,11 +38,20 @@ Because this is just a database in its current format, the installation instruct
 * Make sure you have MongoDB, Express, and Node.js installed on your local machine.  
 * Fork and clone the repository.
 * Navigate to the top level folder within Terminal/Command Line.
-* Run _npm install_
+* Run **_npm install_**
 * Double check your package.json file.  **"type": "module"** should be included near line 5. 
+* Next navigate to your /db folder and run **_node seed.js_**
 
+This will get the data seeded into the database and you can run your tests and view the data using the following routes:
 
+```js
+router.get('/', salaryController.index)
+router.get('/:year', salaryController.showYear)
+router.post('/', salaryController.create)
+router.put('/:id', salaryController.edit)
+router.delete('/:id', salaryController.delete)
+```
 
 ## Sources
 
-
+Currently there are 3 sources of data
